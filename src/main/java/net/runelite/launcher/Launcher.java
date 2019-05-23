@@ -183,6 +183,19 @@ public class Launcher
 
 		REPO_DIR.mkdirs();
 
+		try
+		{
+			options = parser.parse(Patcher.patchBootstrap(frame, bootstrap, args));
+		}
+		catch (Exception ex)
+		{
+			log.error("unable to patch bootstrap", ex);
+			frame.setVisible(false);
+			frame.dispose();
+			System.exit(-1);
+			return;
+		}
+
 		// Clean out old artifacts from the repository
 		clean(bootstrap.getArtifacts());
 

@@ -64,6 +64,9 @@ class ReflectionLauncher
 
 		URLClassLoader loader = new URLClassLoader(jarUrls, parent);
 
+		// Added to enable developer-mode
+		loader.setDefaultAssertionStatus(true);
+
 		UIManager.put("ClassLoader", loader); // hack for Substance
 		Thread thread = new Thread()
 		{

@@ -178,9 +178,6 @@ public class Launcher
 			return;
 		}
 
-		// update packr vmargs
-		PackrConfig.updateLauncherArgs(bootstrap);
-
 		REPO_DIR.mkdirs();
 
 		try
@@ -195,6 +192,9 @@ public class Launcher
 			System.exit(-1);
 			return;
 		}
+
+		// update packr vmargs
+		PackrConfig.updateLauncherArgs(bootstrap);
 
 		// Clean out old artifacts from the repository
 		clean(bootstrap.getArtifacts());

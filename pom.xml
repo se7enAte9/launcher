@@ -39,7 +39,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 
 		<logback.version>1.2.3</logback.version>
-		<guava.version>23.2-jre</guava.version>
+		<guava.version>24.1.1-jre</guava.version>
 		<packr.version>9139616e3837f0f3eb51071d786fc810769012a8</packr.version>
 
 		<main.class>net.runelite.launcher.Launcher</main.class>
